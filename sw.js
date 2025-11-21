@@ -1,4 +1,4 @@
-const CACHE_NAME = 'voice-to-text-v1';
+const CACHE_NAME = 'voice-to-text-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -8,9 +8,27 @@ const ASSETS = [
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting(); // Force waiting service worker to become active
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(ASSETS))
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    Promise.all([
+      self.clients.claim(), // Take control of all clients immediately
+      caches.keys().then((keys) => {
+        return Promise.all(
+          keys.map((key) => {
+            if (key !== CACHE_NAME) {
+              return caches.delete(key);
+            }
+          })
+        );
+      })
+    ])
   );
 });
 
