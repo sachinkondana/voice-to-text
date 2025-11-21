@@ -36,16 +36,8 @@ To run this project locally:
    cd html_voice_to_text
    ```
 
-3. **Serve the application**
-   Since this project uses Service Workers and modern APIs, it's best to run it on a local server (e.g., Live Server, Python SimpleHTTPServer).
-   
-   ```bash
-   # Python 3
-   python3 -m http.server 8000
-   ```
-
-4. **Open in Browser**
-   Visit `http://localhost:8000` in Google Chrome or Microsoft Edge (browsers with Web Speech API support).
+3. **Serve the application**=
+   ```Run using live server```
 
 ## 📱 PWA Installation
 
