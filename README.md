@@ -3,7 +3,7 @@
 A modern, responsive web application that converts speech to text instantly using the Web Speech API. This application is designed to be simple, efficient, and accessible, featuring a clean UI with a real-time audio visualizer.
 
 ## 🔗 Live Demo
-[**Launch App**](https://v2t-sk.netlify.app/)
+[**Launch App**](https://sk-voice-to-text.netlify.app/)
 
 ## ✨ Features
 

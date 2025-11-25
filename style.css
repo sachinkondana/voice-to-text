@@ -448,7 +448,22 @@ textarea::placeholder {
     margin-top: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .landing-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .landing-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .hero-section {
         flex-direction: column;
         text-align: center;
@@ -459,14 +474,58 @@ textarea::placeholder {
         font-size: 2.5rem;
     }
 
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
     .hero-actions {
         justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn-primary.large,
+    .btn-secondary.large {
+        width: 100%;
+        padding: 1rem;
     }
 
     .hero-visual {
-        margin-top: 2rem;
-        width: 300px;
-        height: 300px;
+        display: none;
+    }
+
+    .features-section {
+        padding: 4rem 0;
+    }
+
+    .features-section h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .browsers-section {
+        padding: 4rem 0;
+    }
+
+    .browsers-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .browser-card {
+        width: 100%;
+        max-width: 280px;
     }
 }
 
