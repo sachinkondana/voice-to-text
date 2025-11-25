@@ -4,67 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Voice2Text">
-    <link rel="apple-touch-icon" href="logo.png">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="manifest" href="manifest.json">
-    <title>Voice to Text</title>
+    <title>Voice to Text - Convert Speech Instantly</title>
+    <meta name="description"
+        content="A modern, responsive web application that converts speech to text instantly using the Web Speech API.">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="app-container">
-        <header>
-            <h1>Voice to Text</h1>
-            <p>Convert your speech into text instantly</p>
-        </header>
-
-        <main>
-            <div class="visualizer-container" id="visualizer">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
+    <div class="landing-container">
+        <nav class="landing-nav">
+            <div class="logo">
+                <img src="logo.png" alt="Voice to Text Logo" class="nav-logo">
+                <span>Voice2Text</span>
             </div>
+            <a href="app.html" class="btn-primary small">Launch App</a>
+        </nav>
 
-            <div class="controls">
-                <button id="recordBtn" class="btn-record">
-                    <span class="icon">🎙️</span>
-                    <span class="text">Start Recording</span>
-                </button>
-            </div>
-
-            <div class="output-container">
-                <textarea id="transcript" placeholder="Your text will appear here..." readonly></textarea>
-                <div class="actions">
-                    <button id="copyBtn" class="btn-action" title="Copy to Clipboard">
-                        <span class="icon">📋</span> Copy
-                    </button>
-                    <button id="clearBtn" class="btn-action" title="Clear Text">
-                        <span class="icon">🗑️</span> Clear
-                    </button>
+        <main class="hero-section">
+            <div class="hero-content">
+                <h1>Turn Your Voice into <span class="gradient-text">Perfect Text</span></h1>
+                <p class="hero-subtitle">Experience the future of dictation with our lightning-fast, privacy-focused
+                    speech recognition tool. Works offline and on any device.</p>
+                <div class="hero-actions">
+                    <a href="app.html" class="btn-primary large">Try It Now</a>
+                    <a href="#features" class="btn-secondary large">Learn More</a>
                 </div>
             </div>
+            <div class="hero-visual">
+                <!-- Abstract visual representation of voice waves -->
+                <div class="visual-circle c1"></div>
+                <div class="visual-circle c2"></div>
+                <div class="visual-circle c3"></div>
+            </div>
         </main>
-    </div>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed: ', err);
-                    });
-            });
-        }
-    </script>
-    <script src="script.js"></script>
+        <section id="features" class="features-section">
+            <h2>Why Choose Voice2Text?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Real-time Recognition</h3>
+                    <p>Converts your speech to text instantly as you speak with high accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌊</div>
+                    <h3>Dynamic Visualizer</h3>
+                    <p>Beautiful audio wave animation that reacts to your voice in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>PWA Support</h3>
+                    <p>Install as a native app on your mobile or desktop device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Offline Capable</h3>
+                    <p>Keep working even without an internet connection once installed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Easy Clipboard</h3>
+                    <p>Copy your transcribed text with a single click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Your voice data is processed locally in your browser.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="browsers-section">
+            <h2>Supported Browsers</h2>
+            <div class="browsers-grid">
+                <div class="browser-card">
+                    <div class="browser-icon">
+                        <img src="chrome.png" alt="Google Chrome">
+                    </div>
+                    <h3>Google Chrome</h3>
+                    <p>Best Experience</p>
+                </div>
+                <div class="browser-card">
+                    <div class="browser-icon">
+                        <img src="edge.png" alt="Microsoft Edge">
+                    </div>
+                    <h3>Microsoft Edge</h3>
+                    <p>Fully Supported</p>
+                </div>
+                <div class="browser-card">
+                    <div class="browser-icon">
+                        <img src="safari.png" alt="Safari">
+                    </div>
+                    <h3>Safari</h3>
+                    <p>Partial Support</p>
+                </div>
+            </div>
+            <p class="browser-note">This application relies on the Web Speech API.</p>
+        </section>
+
+        <footer class="landing-footer">
+            <p>&copy;2025 Voice to Text. Created by Sachin Kondana.</p>
+        </footer>
+    </div>
 </body>
 
 </html>

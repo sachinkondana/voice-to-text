@@ -3,7 +3,7 @@
 A modern, responsive web application that converts speech to text instantly using the Web Speech API. This application is designed to be simple, efficient, and accessible, featuring a clean UI with a real-time audio visualizer.
 
 ## 🔗 Live Demo
-[**Launch App**](https://v2t-sk.netlify.app/)
+[**Launch App**](https://sk-voice-to-text.netlify.app/)
 
 ## ✨ Features
 
@@ -36,8 +36,16 @@ To run this project locally:
    cd html_voice_to_text
    ```
 
-3. **Serve the application**=
-   ```Run using live server```
+3. **Serve the application**
+   Since this project uses Service Workers and modern APIs, it's best to run it on a local server (e.g., Live Server, Python SimpleHTTPServer).
+   
+   ```bash
+   # Python 3
+   python3 -m http.server 8000
+   ```
+
+4. **Open in Browser**
+   Visit `http://localhost:8000` in Google Chrome or Microsoft Edge (browsers with Web Speech API support).
 
 ## 📱 PWA Installation
 

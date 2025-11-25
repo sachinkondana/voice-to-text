@@ -1,7 +1,6 @@
 const CACHE_NAME = 'voice-to-text-v2';
 const ASSETS = [
-  './',
-  './index.html',
+  './app.html',
   './style.css',
   './script.js',
   './logo.png'

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Voice2Text">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="manifest.json">
+    <title>Voice to Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Voice to Text</h1>
+            <p>Convert your speech into text instantly</p>
+        </header>
+
+        <main>
+            <div class="visualizer-container" id="visualizer">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+
+            <div class="controls">
+                <button id="recordBtn" class="btn-record">
+                    <span class="icon">🎙️</span>
+                    <span class="text">Start Recording</span>
+                </button>
+            </div>
+
+            <div class="output-container">
+                <textarea id="transcript" placeholder="Your text will appear here..." readonly></textarea>
+                <div class="actions">
+                    <button id="copyBtn" class="btn-action" title="Copy to Clipboard">
+                        <span class="icon">📋</span> Copy
+                    </button>
+                    <button id="clearBtn" class="btn-action" title="Clear Text">
+                        <span class="icon">🗑️</span> Clear
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
