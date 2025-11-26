@@ -1,9 +1,20 @@
-const CACHE_NAME = 'voice-to-text-v2';
+const CACHE_NAME = 'voice-to-text-v3';
 const ASSETS = [
   './app.html',
+  './index.html',
   './style.css',
   './script.js',
-  './logo.png'
+  './logo.png',
+  './favicon.ico',
+  './favicon-16x16.png',
+  './favicon-32x32.png',
+  './apple-touch-icon.png',
+  './android-chrome-192x192.png',
+  './android-chrome-512x512.png',
+  './chrome.png',
+  './edge.png',
+  './safari.png',
+  './manifest.json'
 ];
 
 self.addEventListener('install', (event) => {

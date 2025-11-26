@@ -1,19 +1,27 @@
 {
   "name": "Voice to Text",
   "short_name": "Voice2Text",
+  "description": "Convert your speech to text instantly using the Web Speech API",
   "start_url": "./app.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4a90e2",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo.png",
+      "src": "android-chrome-512x512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ]
